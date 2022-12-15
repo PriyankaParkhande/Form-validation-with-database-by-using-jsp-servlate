@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FormValidationTable</title>
+    <style>
+        .error {
+            color: rgb(179, 104, 104);
+        }
+        
+        body {
+            background-color: rgb(226, 225, 222);
+            ;
+            color: rgb(236, 159, 16);
+        }
+        
+        .container {
+            padding-top: 180px;
+        }
+        
+        .col {
+            height: auto;
+            width: 400px;
+            border: 1px solid lightcyan;
+            border-radius: 5px 15px;
+            padding-bottom: 10px;
+            box-shadow: 2%;
+            background-color: whitesmoke;
+        }
+        
+        .btn:hover {
+            background-color: white;
+        }
+        
+        .sub {
+            background-color: rgb(236, 159, 16);
+            width: auto;
+            border: none;
+            border-radius: 2px;
+            color: white;
+        }
+        
+        input {
+            border-radius: 2px;
+            color: rgb(236, 159, 16);
+            border: 1px solid rgb(236, 159, 16);
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+   <form name="loginfrm" action="Regform" method="POST">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="header">
+                        <h2>Welcome</h2>
+                    </div>
+                    <table cellspacing="8" collsspans="2">
+                        <th>
+                            <tr>
+                                <td>Name</td>
+                                <td>
+                                    <input type="text" name="Name" id="name" placeholder="enter your name" onkeyup="validname()"><br><span class="error" id="nerror"></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Email</td>
+                                <td>
+                                    <input type="text" name="Email" id="email" placeholder="enter your mail id" onkeyup="validemail()"><br><span class="error" id="eerror"></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Contact</td>
+                                <td>
+                                    <input type="text" name="Contact" id="contact" placeholder="enter your contact number" onkeyup="validcontact()"><br><span class="error" id="cerror"></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Password</td>
+                                <td>
+                                    <input type="text" name="Password" id="password" placeholder="enter password Abcd@1234" onkeyup="validpassword()"><br><span class="error" id="perror"></span>
+                                </td>
+                            </tr>
+                           <tr>
+                                <td>Confirm Password</td>
+                                <td>
+                                    <input type="text" name="Confirm_Password" id="cpassword" placeholder="enter confirm password Abcd@1234" onkeyup="validcpassword()"><br><span class="error" id="cperror"></span>
+                                </td>
+                            </tr>
+
+                        </th>
+                    </table>
+
+                    <div class="btn">
+                        <center>
+                            <button type="submit" id="submit" class="sub" onclick="login()">Submit</button>
+                            <button type="reset" value="reset" class="sub">Cancel</button>
+                        </center>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <script src="formvalidationnecp.js"></script>
+        </form>
+    </center>
+
+</body>
+
+</html>
